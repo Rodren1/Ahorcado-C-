@@ -34,6 +34,7 @@ namespace Ahorcado
             }
             label1.Text = auxiliar;
         }
+
         public void botonPulsado(object sender, EventArgs e)
         {
             Button miBoton = (Button)sender;
