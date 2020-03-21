@@ -43,8 +43,18 @@ namespace Ahorcado
             if (!gameOver) {
                 if (palabraOculta.Contains(letra))
                 {
+                    for (int i = 0; i < palabraOculta.Length; i++)
+                    {
+                        if (palabraOculta[i] == letra[0])
+                        {
+                            label1.Text = label1.Text.Substring(0, 2 * i)
+                                    + letra
+                                    + label1.Text.Substring(2 * i + 1);
+                        }
+                    }
                     int posicion = palabraOculta.IndexOf(letra);
                     label1.Text = label1.Text.Remove(2 * posicion, 1).Insert(2 * posicion, letra);
+
                 }
                 else
                 {
